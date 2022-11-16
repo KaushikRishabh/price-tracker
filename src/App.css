@@ -13,6 +13,24 @@
   }
 }
 
+.box {
+  height: 20px;
+}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+.id,
+.name,
+.symbol {
+  padding: 10px;
+
+  /* text-align: left; */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
