@@ -27,11 +27,16 @@ function App() {
     <div className="App">
       {coinData.length && (
         <ol>
+          <li key="1" className="list-heading wrapper">
+            <span className="id box">ID</span>
+            <span className="name box">NAME</span>
+            <span className="symbol box">SYMBOL</span>
+          </li>
           {coinData.map((coin) => (
-            <li key={coin.id} className="list-item">
+            <li key={coin.id} className="list-item wrapper">
               <span className="id box">{coin.id}</span>
               <span className="name box">{coin.name}</span>
-              <span className="symbol box">{coin.symbol}</span>
+              <span className="symbol box">${coin.symbol}</span>
             </li>
           ))}
         </ol>

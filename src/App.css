@@ -15,20 +15,22 @@
 
 .box {
   height: 20px;
+  background-color: wheat;
+  margin: 10px;
 }
-
-.list-item {
+.list-heading > .box {
+  background-color: orange;
+}
+/* .list-item {
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: gray;
-}
-.id,
-.name,
-.symbol {
-  padding: 10px;
+} */
 
-  /* text-align: left; */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .App-header {
