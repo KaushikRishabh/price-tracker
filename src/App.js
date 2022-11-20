@@ -1,10 +1,9 @@
-// import logo from "./logo.svg";
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import Chart from "./components/Chart";
 
 function App() {
-  //let coinData = [];
   const [coinData, setCoinData] = useState([]);
   const [id, setId] = useState([]);
   const [price, setPrice] = useState([]);
@@ -20,10 +19,6 @@ function App() {
       setCoinData(eth);
       console.log(response.data);
     });
-
-    // axios.get(btcPriceURL).then((response) => {
-    //   console.log(response.data);
-    // });
   }, []);
 
   const getPrice = (id) => {
@@ -67,8 +62,15 @@ function App() {
         </ol>
       )}
       <div>
-        Price of {id} is: {price}
+        {price != "" && (
+          <span>
+            Price of {id} is: {price}
+          </span>
+        )}
       </div>
+      <Fragment>
+        <Chart id={id} />
+      </Fragment>
     </div>
   );
 }
